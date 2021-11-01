@@ -25,10 +25,11 @@ body {
   
   section h2 {
     font-size: 20px;
+    text-align: center;
   }
   
   header {
-    background-image: url('imagens/background.jpg');
+    background-image: url('imagens/fundo.jpg');
     /* background-image: url('https://cdn.cinepop.com.br/2021/02/pokemon-list.jpg'); */
     /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/background-size   */
     background-size: cover;
@@ -40,7 +41,7 @@ body {
     padding: 15px;
     border-radius: 5px;
     /* propriedade visual: valor   */
-    background-color: #bac3d6;
+    background-color: #a6c1d3;
   }
   
   img {
