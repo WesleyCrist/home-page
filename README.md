@@ -1,3 +1,3 @@
 Olá...
 
-Essa é minha home page, onde vou linkar todo meu portifólio futuramente
+Essa é minha home page, é aqui onde centralizo todos os meus projetos de desenvolvimento.
