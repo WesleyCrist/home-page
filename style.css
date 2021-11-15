@@ -2,7 +2,7 @@
 
 body {
     /* background-image: linear-gradient(to right, #50bbe6, #98e2ec); < Padrão de cores anterior > */
-    background-image: radial-gradient(circle, #6ABFF0, #5396BD);
+    background-image: radial-gradient(circle, #11B5E4, #1481BA);
     font-family: 'Roboto';
   }
   
@@ -31,7 +31,7 @@ body {
   }
   
   header {
-    background-image: url('imagens/fundo.jpg');
+    background-image: url('https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     /* background-image: url('https://cdn.cinepop.com.br/2021/02/pokemon-list.jpg'); < Imagem de capa de pokemon > */
     /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/background-size   */
     background-size: cover;
@@ -39,11 +39,11 @@ body {
     border-radius: 5px;
   }
   
-  div {
+  main {
     padding: 15px;
     border-radius: 5px;
     /* propriedade visual: valor   */
-    background-color: #a6c1d3;
+    background-color: #E09738;
   }
   
   img {
