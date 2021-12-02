@@ -1,3 +1,5 @@
+/*
+
 var nome
 var idade, peso, altura, tmp, IMC
 
@@ -50,3 +52,5 @@ else {
 }
 
 alert("Beba água!")
+
+*/
