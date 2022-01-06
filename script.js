@@ -1,52 +1,87 @@
-var nome
-var idade, peso, altura, tmp, IMC
-
-alert("Bem vindo!")
-
-nome = prompt("Qual seu nome?")
-idade = Number.parseInt(prompt("Qual sua idade?"))
-peso = Number.parseFloat(prompt("Qual seu peso?"))
-tmp = Number.parseFloat(prompt("Qual sua altura em centímetros?"))
-
-altura = tmp / 100
-IMC = peso / (altura * altura)
-
-if (idade >= 65) {
-
-    if (IMC <= 22){
-        alert(nome + ", você está abaixo do peso!")
+var info = "início"
+var agora = new Date()
+var dia = agora.getDay()
+var hora = agora.getHours()
+if (hora > 6 || hora < 12) {
+    //Bom dia
+    switch (dia){
+        case 0:
+        info = "Bom dia, espero que tenha um ótimo domingo!"
+        break
+    case 1:
+        info = "Bom dia, espero que tenha uma ótima segunda!"
+        break
+    case 2:
+        info = "Bom dia, espero que tenha uma ótima terça!"
+        break
+    case 3:
+        info = "Bom dia, espero que tenha um ótima quarta!"
+        break
+    case 4:
+        info = "Bom dia, espero que tenha uma ótima quinta!"
+        break
+    case 5:
+        info = "Bom dia, espero que tenha uma ótima sexta! | #Sextou"
+        break
+    case 6:
+        info = "Bom dia, espero que tenha um ótimo Sábado!"
+        break
+    default:
+        console.log("Erro inexperado")
     }
-    else if (IMC > 22 && IMC <= 27){
-        alert(nome + ", você está adequado ou eutrófico!")
+} else if (hora >= 12 || hora < 18) {
+    //Boa tarde
+    switch (dia){
+        case 0:
+        info = "Boa tarde, espero que esteja tendo um ótimo domingo!"
+        break
+    case 1:
+        info = "Boa tarde, espero que esteja tendo uma ótima segunda!"
+        break
+    case 2:
+        info = "Boa tarde, espero que esteja tendo uma ótima terça!"
+        break
+    case 3:
+        info = "Boa tarde, espero que esteja tendo um ótima quarta!"
+        break
+    case 4:
+        info = "Boa tarde, espero que esteja tendo uma ótima quinta!"
+        break
+    case 5:
+        info = "Boa tarde, espero que esteja tendo uma ótima sexta!"
+        break
+    case 6:
+        info = "Boa tarde, espero que esteja tendo um ótimo Sábado!"
+        break
+    default:
+        console.log("Erro inexperado")
     }
-    else {
-        alert(nome + ", você está acima do peso!")
+} else {
+    //Boa noite
+    switch (dia){
+        case 0:
+        info = "Boa noite, espero que tenha tido um ótimo domingo!"
+        break
+    case 1:
+        info = "Boa noite, espero que tenha tido uma ótima segunda!"
+        break
+    case 2:
+        info = "Boa noite, espero que tenha tido uma ótima terça!"
+        break
+    case 3:
+        info = "Boa noite, espero que tenha tido um ótima quarta!"
+        break
+    case 4:
+        info = "Boa noite, espero que tenha tido uma ótima quinta!"
+        break
+    case 5:
+        info = "Boa noite, espero que tenha tido uma ótima sexta!"
+        break
+    case 6:
+        info = "Boa noite, espero que tenha tido um ótimo Sábado!"
+        break
+    default:
+        console.log("Erro inexperado")
     }
-    
 }
-else if (idade < 65) {
-
-    if (IMC < 18.5) {
-        alert(nome + ", você está abaixo do peso!")
-    }
-    else if (IMC >=18.5 && IMC < 24.9) {
-        alert(nome + ", você está com o peso normal!")
-    }
-    else if (IMC >=25 && IMC < 29.9) {
-        alert(nome + ", excesso de peso!")
-    }
-    else if (IMC >=30 && IMC < 34.9) {
-        alert(nome + ", você está com obesidade classe 1!")
-    }
-    else if (IMC >= 35 && IMC < 39.9) {
-        alert(nome + ", você está com obesidade classe 2!")
-    }
-    else {
-        alert(nome + ", você está com obesidade classe 3!")
-    }
-}     
-else {
-    alert("Ação inválida!")
-}
-
-alert("Beba água!")
+alert(info)
