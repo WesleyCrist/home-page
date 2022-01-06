@@ -15,7 +15,7 @@ if (hora > 6 && hora < 12) {
         info = "Bom dia, espero que tenha uma ótima terça!"
         break
     case 3:
-        info = "Bom dia, espero que tenha um ótima quarta!"
+        info = "Bom dia, espero que tenha uma ótima quarta!"
         break
     case 4:
         info = "Bom dia, espero que tenha uma ótima quinta!"
@@ -42,7 +42,7 @@ if (hora > 6 && hora < 12) {
         info = "Boa tarde, espero que esteja tendo uma ótima terça!"
         break
     case 3:
-        info = "Boa tarde, espero que esteja tendo um ótima quarta!"
+        info = "Boa tarde, espero que esteja tendo uma ótima quarta!"
         break
     case 4:
         info = "Boa tarde, espero que esteja tendo uma ótima quinta!"
