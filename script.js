@@ -2,7 +2,7 @@ var info = "início"
 var agora = new Date()
 var dia = agora.getDay()
 var hora = agora.getHours()
-if (hora > 6 && hora < 12) {
+if (hora > 5 && hora < 12) {
     //Bom dia
     switch (dia){
         case 0:
@@ -56,7 +56,7 @@ if (hora > 6 && hora < 12) {
     default:
         console.log("Erro inexperado")
     }
-} else {
+} else if (hora >= 18 && hora < 23){
     //Boa noite
     switch (dia){
         case 0:
@@ -83,5 +83,8 @@ if (hora > 6 && hora < 12) {
     default:
         console.log("Erro inexperado")
     }
+}
+else {
+    info = "Isso não é hora de estar acordado, vair dormir cuida!"
 }
 alert(info)
