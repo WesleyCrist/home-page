@@ -1,90 +1,49 @@
-var info = "início"
-var agora = new Date()
-var dia = agora.getDay()
-var hora = agora.getHours()
+let info = "início"
+const agora = new Date()
+const dia = agora.getDay()
+const hora = agora.getHours()
+const msg = [[  // mensagens de bom dia
+                'Bom dia, espero que tenha um ótimo domingo!', 
+                'Bom dia, espero que tenha uma ótima segunda!', 
+                'Bom dia, espero que tenha uma ótima terça!', 
+                'Bom dia, espero que tenha uma ótima quarta!', 
+                'Bom dia, espero que tenha uma ótima quinta!',
+                'Bom dia, espero que tenha uma ótima sexta! | #Sextou',
+                'Bom dia, espero que tenha um ótimo Sábado!'],
+                [ // mensagens de boa tarde
+                'Boa tarde, espero que esteja tendo um ótimo domingo!',
+                'Boa tarde, espero que esteja tendo uma ótima segunda!',
+                'Boa tarde, espero que esteja tendo uma ótima terça!',
+                'Boa tarde, espero que esteja tendo uma ótima quarta!',
+                'Boa tarde, espero que esteja tendo uma ótima quinta!',
+                'Boa tarde, espero que esteja tendo uma ótima sexta',
+                'Boa tarde, espero que esteja tendo um ótimo Sábado!'],
+                [ // mensagens de boa noite
+                'Boa noite, espero que tenha tido um ótimo domingo!',
+                'Boa noite, espero que tenha tido uma ótima segunda!',
+                'Boa noite, espero que tenha tido uma ótima terça!',
+                'Boa noite, espero que tenha tido um ótima quarta!',
+                'Boa noite, espero que tenha tido uma ótima quinta!',
+                'Boa noite, espero que tenha tido uma ótima sexta!',
+                'Boa noite, espero que tenha tido um ótimo Sábado!']]
+const alerta = 'Isso não é hora de ninguém estar acordado'
+
+function manha(pos)  { info = msg[0][pos] }
+function tarde(pos)  { info = msg[1][pos] }
+function noite(pos)  { info = msg[2][pos] }
+function madrug()    { info = alerta      }
+
 if (hora > 5 && hora < 12) {
-    //Bom dia
-    switch (dia){
-        case 0:
-        info = "Bom dia, espero que tenha um ótimo domingo!"
-        break
-    case 1:
-        info = "Bom dia, espero que tenha uma ótima segunda!"
-        break
-    case 2:
-        info = "Bom dia, espero que tenha uma ótima terça!"
-        break
-    case 3:
-        info = "Bom dia, espero que tenha uma ótima quarta!"
-        break
-    case 4:
-        info = "Bom dia, espero que tenha uma ótima quinta!"
-        break
-    case 5:
-        info = "Bom dia, espero que tenha uma ótima sexta! | #Sextou"
-        break
-    case 6:
-        info = "Bom dia, espero que tenha um ótimo Sábado!"
-        break
-    default:
-        console.log("Erro inexperado")
-    }
-} else if (hora >= 12 && hora < 18) {
-    //Boa tarde
-    switch (dia){
-        case 0:
-        info = "Boa tarde, espero que esteja tendo um ótimo domingo!"
-        break
-    case 1:
-        info = "Boa tarde, espero que esteja tendo uma ótima segunda!"
-        break
-    case 2:
-        info = "Boa tarde, espero que esteja tendo uma ótima terça!"
-        break
-    case 3:
-        info = "Boa tarde, espero que esteja tendo uma ótima quarta!"
-        break
-    case 4:
-        info = "Boa tarde, espero que esteja tendo uma ótima quinta!"
-        break
-    case 5:
-        info = "Boa tarde, espero que esteja tendo uma ótima sexta!"
-        break
-    case 6:
-        info = "Boa tarde, espero que esteja tendo um ótimo Sábado!"
-        break
-    default:
-        console.log("Erro inexperado")
-    }
-} else if (hora >= 18 && hora < 23){
-    //Boa noite
-    switch (dia){
-        case 0:
-        info = "Boa noite, espero que tenha tido um ótimo domingo!"
-        break
-    case 1:
-        info = "Boa noite, espero que tenha tido uma ótima segunda!"
-        break
-    case 2:
-        info = "Boa noite, espero que tenha tido uma ótima terça!"
-        break
-    case 3:
-        info = "Boa noite, espero que tenha tido um ótima quarta!"
-        break
-    case 4:
-        info = "Boa noite, espero que tenha tido uma ótima quinta!"
-        break
-    case 5:
-        info = "Boa noite, espero que tenha tido uma ótima sexta!"
-        break
-    case 6:
-        info = "Boa noite, espero que tenha tido um ótimo Sábado!"
-        break
-    default:
-        console.log("Erro inexperado")
-    }
+    manha(dia)
+}
+else if (hora >= 12 && hora < 18) {
+    tarde(dia)
+}
+else if (hora >= 18 && hora <= 23) {
+    noite(dia)
 }
 else {
-    info = "Isso não é hora de estar acordado, vair dormir cuida!"
+    madrug()
 }
+
 alert(info)
