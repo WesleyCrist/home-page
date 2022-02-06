@@ -28,22 +28,17 @@ const msg = [[  // mensagens de bom dia
                 'Boa noite, espero que tenha tido um ótimo Sábado!']]
 const alerta = 'Isso não é hora de ninguém estar acordado'
 
-function manha(pos)  { info = msg[0][pos] }
-function tarde(pos)  { info = msg[1][pos] }
-function noite(pos)  { info = msg[2][pos] }
-function madrug()    { info = alerta      }
-
 if (hora > 5 && hora < 12) {
-    manha(dia)
+    info = msg[0][dia]
 }
 else if (hora >= 12 && hora < 18) {
-    tarde(dia)
+    info = msg[1][dia]
 }
 else if (hora >= 18 && hora <= 23) {
-    noite(dia)
+    info = msg[2][dia]
 }
 else {
-    madrug()
+    info = alerta
 }
 
 alert(info)
