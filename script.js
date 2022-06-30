@@ -1,7 +1,10 @@
-let info = "início"
+let mensagem = document.getElementById('msg')
+
+// let info = "início"
 const agora = new Date()
 const dia = agora.getDay()
 const hora = agora.getHours()
+const alerta = 'Isso não é hora de ninguém estar acordado'
 const msg = [[  // mensagens de bom dia
                 'Bom dia, espero que tenha um ótimo domingo!', 
                 'Bom dia, espero que tenha uma ótima segunda!', 
@@ -26,19 +29,22 @@ const msg = [[  // mensagens de bom dia
                 'Boa noite, espero que tenha tido uma ótima quinta!',
                 'Boa noite, espero que tenha tido uma ótima sexta!',
                 'Boa noite, espero que tenha tido um ótimo Sábado!']]
-const alerta = 'Isso não é hora de ninguém estar acordado'
 
 if (hora > 5 && hora < 12) {
-    info = msg[0][dia]
+    mensagem.innerHTML = msg[0][dia]
+    // info = msg[0][dia]
 }
 else if (hora >= 12 && hora < 18) {
-    info = msg[1][dia]
+    mensagem.innerHTML = msg[1][dia]
+    // info = msg[1][dia]
 }
 else if (hora >= 18 && hora <= 23) {
-    info = msg[2][dia]
+    mensagem.innerHTML = msg[2][dia]
+    // info = msg[2][dia]
 }
 else {
-    info = alerta
+    mensagem.innerHTML = alerta
+    // info = alerta
 }
 
-alert(info)
+// alert(info)
