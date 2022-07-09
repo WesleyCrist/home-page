@@ -3,7 +3,7 @@
     const agora = new Date()
     const dia = agora.getDay()
     const hora = agora.getHours()
-    const alerta = 'Isso não é hora de ninguém estar acordado'
+    const alerta = 'Isso não é hora de ninguém estar acordado!'
     const msg = [[  // mensagens de bom dia
                     'Bom dia, espero que tenha um ótimo domingo!', 
                     'Bom dia, espero que tenha uma ótima segunda!', 
@@ -18,7 +18,7 @@
                     'Boa tarde, espero que esteja tendo uma ótima terça!',
                     'Boa tarde, espero que esteja tendo uma ótima quarta!',
                     'Boa tarde, espero que esteja tendo uma ótima quinta!',
-                    'Boa tarde, espero que esteja tendo uma ótima sexta',
+                    'Boa tarde, espero que esteja tendo uma ótima sexta!',
                     'Boa tarde, espero que esteja tendo um ótimo Sábado!'],
                     [ // mensagens de boa noite
                     'Boa noite, espero que tenha tido um ótimo domingo!',
