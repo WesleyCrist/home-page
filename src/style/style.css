@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body {
-    background: url(imagens/backgroud.jpg) no-repeat center center fixed;
+    background: url(../../assets/backgroud.jpg) no-repeat center center fixed;
     font-family: 'Roboto';
   }
   
