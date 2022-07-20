@@ -1,5 +1,4 @@
-(function(){
-    const mensagem = document.getElementById('msg')
+export const mensagem = document.getElementById('msg')
     const agora = new Date()
     const dia = agora.getDay()
     const hora = agora.getHours()
@@ -41,4 +40,3 @@
     else {
         mensagem.innerHTML = alerta
     }
-})()
