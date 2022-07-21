@@ -29,7 +29,7 @@
                     'Boa noite, espero que tenha tido uma ótima sexta!',
                     'Boa noite, espero que tenha tido um ótimo Sábado!']]
 
-    if (hora > 5 && hora < 12) {
+    if (hora > 4 && hora < 12) {
         mensagem.innerHTML = msg[0][dia]
     }
     else if (hora >= 12 && hora < 18) {
