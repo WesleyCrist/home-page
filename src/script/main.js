@@ -24,7 +24,7 @@
                     'Boa noite, espero que tenha tido um ótimo domingo!',
                     'Boa noite, espero que tenha tido uma ótima segunda!',
                     'Boa noite, espero que tenha tido uma ótima terça!',
-                    'Boa noite, espero que tenha tido um ótima quarta!',
+                    'Boa noite, espero que tenha tido uma ótima quarta!',
                     'Boa noite, espero que tenha tido uma ótima quinta!',
                     'Boa noite, espero que tenha tido uma ótima sexta!',
                     'Boa noite, espero que tenha tido um ótimo Sábado!']]
