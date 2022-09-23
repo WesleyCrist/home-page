@@ -1,4 +1,4 @@
-(function(){
+(() => {
     const mensagem = document.getElementById('msg')
     const agora = new Date()
     const dia = agora.getDay()

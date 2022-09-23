@@ -1,11 +1,13 @@
-(function(){
+(() => {
+
+    // Captura de itens no html
     const form = document.querySelector('.form')
     const nome = document.querySelector('.nome')
     const resultado = document.querySelector('.resultado')
     const peso = document.querySelector('.peso')
     const altura = document.querySelector('.altura')
 
-    function msg(condition) {
+    const msg = (condition) => {
         // Escrever na tela o resultado final so script
         if (condition != "") {
             resultado.innerHTML = (`${condition}`)
@@ -14,7 +16,7 @@
         }
     }
 
-    function calc(nome, peso, altura) {
+    const calc = (nome, peso, altura) => {
     // função pra calcular imc do indivíduo
         let imc = peso / ( altura * altura)
         
@@ -50,4 +52,5 @@
             }
         }
     })
+
 })()
