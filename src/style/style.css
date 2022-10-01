@@ -33,7 +33,7 @@ body {
     font-family: 'Quicksand', sans-serif;
   }
 
-  #msg {
+  .msg {
     font-size: 18px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;

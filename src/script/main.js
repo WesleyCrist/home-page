@@ -1,5 +1,5 @@
 (() => {
-    const mensagem = document.getElementById('msg')
+    const mensagem = document.querySelector('.msg')
     const agora = new Date()
     const dia = agora.getDay()
     const hora = agora.getHours()
@@ -28,7 +28,6 @@
                     'Boa noite, espero que tenha tido uma ótima quinta!',
                     'Boa noite, espero que tenha tido uma ótima sexta!',
                     'Boa noite, espero que tenha tido um ótimo Sábado!']]
-
     if (hora > 4 && hora < 12) {
         mensagem.innerHTML = msg[0][dia]
     }
@@ -41,4 +40,6 @@
     else {
         mensagem.innerHTML = alerta
     }
+
+    console.log('normal mode')
 })()
