@@ -1,3 +1,5 @@
+import geraNumber from "./geraNumber.js"
+
 class Posts {
 
     #bomDia = [
@@ -19,7 +21,7 @@ class Posts {
         'Boa tarde, espero que esteja tendo uma ótima sexta!',
         'Boa tarde, espero que esteja tendo um ótimo Sábado!'
     ]
-
+    
     #boaNoite = [
         'Boa noite, espero que tenha tido um ótimo domingo!',
         'Boa noite, espero que tenha tido uma ótima segunda!',
@@ -29,9 +31,15 @@ class Posts {
         'Boa noite, espero que tenha tido uma ótima sexta!',
         'Boa noite, espero que tenha tido um ótimo Sábado!'
     ]
-
-    #alert = 'Isso não é hora de ninguém estar acordado!'
-
+    
+    #alert = [
+        'Isso não é hora de ninguém estar acordado!',
+        'Homi, vai dormir...',
+        'Isso é hora de tu acordado criatura!?',
+        'Cuida vai dormir, larga essa tela',
+        'olha a hora pow, vai dormir!'
+    ]
+    
     constructor() {}
 
     getDia(variable) {
@@ -52,8 +60,9 @@ class Posts {
         return this.#boaNoite[variable]
     }
 
-    get alert() {
-        return this.#alert
+    getAlert() {
+        // console.log(geraNumber(this.#alert.length, 0))
+        return this.#alert[geraNumber(this.#alert.length, 0)]
     }
 }
 

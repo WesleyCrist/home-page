@@ -1,45 +1,29 @@
+import Hour from "./module/hour.js"
+import Posts from "./module/posts.js"
+// import geraNumber from "./module/geraNumber.js"
+
 (() => {
-    const mensagem = document.querySelector('.msg')
-    const agora = new Date()
-    const dia = agora.getDay()
-    const hora = agora.getHours()
-    const alerta = 'Isso não é hora de ninguém estar acordado!'
-    const msg = [[  // mensagens de bom dia
-                    'Bom dia, espero que tenha um ótimo domingo!', 
-                    'Bom dia, espero que tenha uma ótima segunda!', 
-                    'Bom dia, espero que tenha uma ótima terça!', 
-                    'Bom dia, espero que tenha uma ótima quarta!', 
-                    'Bom dia, espero que tenha uma ótima quinta!',
-                    'Bom dia, espero que tenha uma ótima sexta! | #Sextou',
-                    'Bom dia, espero que tenha um ótimo Sábado!'],
-                    [ // mensagens de boa tarde
-                    'Boa tarde, espero que esteja tendo um ótimo domingo!',
-                    'Boa tarde, espero que esteja tendo uma ótima segunda!',
-                    'Boa tarde, espero que esteja tendo uma ótima terça!',
-                    'Boa tarde, espero que esteja tendo uma ótima quarta!',
-                    'Boa tarde, espero que esteja tendo uma ótima quinta!',
-                    'Boa tarde, espero que esteja tendo uma ótima sexta!',
-                    'Boa tarde, espero que esteja tendo um ótimo Sábado!'],
-                    [ // mensagens de boa noite
-                    'Boa noite, espero que tenha tido um ótimo domingo!',
-                    'Boa noite, espero que tenha tido uma ótima segunda!',
-                    'Boa noite, espero que tenha tido uma ótima terça!',
-                    'Boa noite, espero que tenha tido uma ótima quarta!',
-                    'Boa noite, espero que tenha tido uma ótima quinta!',
-                    'Boa noite, espero que tenha tido uma ótima sexta!',
-                    'Boa noite, espero que tenha tido um ótimo Sábado!']]
-    if (hora > 4 && hora < 12) {
-        mensagem.innerHTML = msg[0][dia]
-    }
-    else if (hora >= 12 && hora < 18) {
-        mensagem.innerHTML = msg[1][dia]
-    }
-    else if (hora >= 18 && hora <= 23) {
-        mensagem.innerHTML = msg[2][dia]
-    }
-    else {
-        mensagem.innerHTML = alerta
+
+    const p = document.querySelector('.msg')
+    const hora = new Hour()
+    const posts = new Posts()
+    const erro = 'Erro na captura da mensagem!'
+    
+    // console.log(hora.hora)
+
+    try {
+        if(hora.hora > 4 && hora.hora < 12) {
+            p.innerHTML = posts.getDia(hora.dia) ?? erro
+        } else if(hora.hora >= 12 && hora.hora < 18) {
+            p.innerHTML = posts.getTarde(hora.dia) ?? erro
+        } else if(hora.hora >= 18 && hora.hora <= 23) {
+            p.innerHTML = posts.getNoite(hora.dia) ?? erro
+        } else {
+            p.innerHTML = posts.getAlert() ?? erro
+        }
+    } catch(e) {
+        p.innerHTML = erro
+        console.log(`error: ${e.message}`)
     }
 
-    console.log('normal mode')
 })()

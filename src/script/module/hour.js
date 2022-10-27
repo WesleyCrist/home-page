@@ -17,10 +17,6 @@ class Hour {
     get dia() {
         return this.#dia
     }
-
-    get hora() {
-        return this.#hora
-    }
 }
 
 export default Hour
