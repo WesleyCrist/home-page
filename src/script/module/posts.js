@@ -1,6 +1,6 @@
-import geraNumber from "./geraNumber.js"
+import GeraNumber from "./GeraNumber.js"
 
-class Posts {
+export default class Posts {
 
     #bomDia = [
         'Bom dia, espero que tenha um ótimo domingo!', 
@@ -36,9 +36,11 @@ class Posts {
         'Isso não é hora de ninguém estar acordado!',
         'Homi, vai dormir...',
         'Isso é hora de tu acordado criatura!?',
-        'Cuida vai dormir, larga essa tela',
+        'Cuida vai dormir, larga essa tela!',
         'olha a hora pow, vai dormir!'
     ]
+
+    #erro = 'Erro na captura da mensagem!'
     
     constructor() {}
 
@@ -60,10 +62,13 @@ class Posts {
         return this.#boaNoite[variable]
     }
 
-    getAlert() {
+    get alert() {
         // console.log(geraNumber(this.#alert.length, 0))
-        return this.#alert[geraNumber(this.#alert.length, 0)]
+        return this.#alert[GeraNumber.generate(this.#alert.length, 0)]
+        // return this.#alert[geraNumber(this.#alert.length, 0)]
+    }
+
+    get erro() {
+        return this.#erro
     }
 }
-
-export default Posts

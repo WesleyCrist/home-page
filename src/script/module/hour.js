@@ -1,4 +1,4 @@
-class Hour {
+export default class Hour {
 
     #hora
     #dia
@@ -11,12 +11,11 @@ class Hour {
     }
 
     get hora() {
-        return this.#hora
+        // return this.#hora
+        return 2
     }
 
     get dia() {
         return this.#dia
     }
 }
-
-export default Hour
