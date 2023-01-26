@@ -11,8 +11,7 @@ export default class Hour {
     }
 
     get hora() {
-        // return this.#hora
-        return 2
+        return this.#hora
     }
 
     get dia() {
