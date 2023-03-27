@@ -1,5 +1,5 @@
-import Hour from "./module/hour.js"
-import Posts from "./module/posts.js"
+import Hour from "./classes/hour.js"
+import Posts from "./classes/posts.js"
 
 (() => {
 
@@ -13,7 +13,6 @@ import Posts from "./module/posts.js"
         if(hora.hora >= 12 && hora.hora < 18) p.innerHTML = posts.getTarde(hora.dia)
         if(hora.hora >= 18 && hora.hora <= 23) p.innerHTML = posts.getNoite(hora.dia)
         if(hora.hora >= 0 && hora.hora <= 4) p.innerHTML = posts.alert
-        // console.log(hora.hora)
     } catch(e) {
         p.innerHTML = posts.erro
         console.log(`error: ${e.message}`)

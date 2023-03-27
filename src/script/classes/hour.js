@@ -10,11 +10,6 @@ export default class Hour {
         this.#hora = this.#agora.getHours()
     }
 
-    get hora() {
-        return this.#hora
-    }
-
-    get dia() {
-        return this.#dia
-    }
+    get hora() { return this.#hora }
+    get dia() { return this.#dia }
 }

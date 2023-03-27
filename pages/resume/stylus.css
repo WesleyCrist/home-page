@@ -8,15 +8,14 @@
 @charset "UTF-8";
 
 /* Desing para todo o corpo do página */
-
 body {
     /* imagem abaixo não mais disponível */
     /* background: url(https://eadesign.art.br/wp-content/uploads/2016/12/fundo-criacao-de-site-rj.jpg) no-repeat center center fixed; */
-    background-color: rgb(17, 86, 102);
+    background-color: rgb(41, 120, 138);
     font-size: 18px;
 }
 
-main {
+.main {
     background-color: white;
     border-radius: 18px;                          
     box-shadow: 5px 5px 15px #093335;           
@@ -25,17 +24,30 @@ main {
     margin: auto;
 }
 
+.title {
+    text-align: center;
+}
+
 p {
     text-align: justify;
     font-family: sans-serif monospace;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 h1 {
     text-align: center;
     background-color: blanchedalmond;
     font-family: serif;
+    padding: 25px;
 }
 
 h2 {
     font-family: serif;
+    padding-left: 35px;
+    /* padding: 20px; */
+}
+
+.ult {
+    padding-bottom: 30px;
 }

@@ -2,6 +2,8 @@ import GeraNumber from "./GeraNumber.js"
 
 export default class Posts {
 
+    constructor() {}
+
     #bomDia = [
         'Bom dia, espero que tenha um ótimo domingo!', 
         'Bom dia, espero que tenha uma ótima segunda!', 
@@ -41,31 +43,41 @@ export default class Posts {
     ]
 
     #erro = 'Erro na captura da mensagem!'
-    
-    constructor() {}
+    #typeError = 'Argumento atribuído de tipo inválido'
+    #rangeError = 'Argumento com valor acima do permitido'
 
-    getDia(variable) {
-        if(typeof(variable) !== 'number') throw 'Parâmetro de passagem inválido'
-        if(variable > 6) throw 'Valor de parâmetro acima do permitido'
-        return this.#bomDia[variable]
+    #shoot = i => {
+        if(typeof(i) !== 'number') throw new TypeError(this.#typeError)
+        switch(i) {
+            case 1:
+                throw new TypeError(this.#typeError)
+                // break;
+            case 2:
+                throw new RangeError(this.#rangeError)
+                // break;
+        }
     }
 
-    getTarde(variable) {
-        if(typeof(variable) !== 'number') throw 'Parâmetro de passagem inválido'
-        if(variable > 6) throw 'Valor de parâmetro acima do permitido'
-        return this.#boaTarde[variable]
+    getDia = i => {
+        if(typeof(i) !== 'number') this.#shoot(1)
+        if(i > 6) this.#shoot(2)
+        return this.#bomDia[i]
     }
 
-    getNoite(variable) {
-        if(typeof(variable) !== 'number') throw 'Parâmetro de passagem inválido'
-        if(variable > 6) throw 'Valor de parâmetro acima do permitido'
-        return this.#boaNoite[variable]
+    getTarde = i => {
+        if(typeof(i) !== 'number') this.#shoot(1)
+        if(i > 6) this.#shoot(2)
+        return this.#boaTarde[i]
+    }
+
+    getNoite = i => {
+        if(typeof(i) !== 'number') this.#shoot(1)
+        if(i > 6) this.#shoot(2)
+        return this.#boaNoite[i]
     }
 
     get alert() {
-        // console.log(geraNumber(this.#alert.length, 0))
         return this.#alert[GeraNumber.generate(this.#alert.length, 0)]
-        // return this.#alert[geraNumber(this.#alert.length, 0)]
     }
 
     get erro() {
